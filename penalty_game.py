@@ -1,3 +1,17 @@
+# ██████╗  █████╗ ██╗  ██╗ █████╗ ██████╗ ██╗██████╗ 
+# ██╔══██╗██╔══██╗██║  ██║██╔══██╗██╔══██╗██║██╔══██╗
+# ██████╦╝███████║███████║██║  ██║██║  ██║██║██████╔╝
+# ██╔══██╗██╔══██║██╔══██║██║  ██║██║  ██║██║██╔══██╗
+# ██████╦╝██║  ██║██║  ██║╚█████╔╝██████╔╝██║██║  ██║
+# ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ ╚═════╝ ╚═╝╚═╝  ╚═╝
+
+# 🔒 Licensed under the GNU GPLv3
+# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# 👤 https://t.me/baxa_akee_2602
+
+# penalty game
+
+
 import random
 
 footbalerScore = 0
@@ -6,45 +20,45 @@ compScore = 0
 komp_zarba = 0
 
 while komp_zarba!=5 :
-    a = input("\nQaysi tarafga tepasiz: \nchap, o'rta, o'ng\n")
-    b = ["chap", "o'rta", "o'ng"]
+    a = input("\nWhich way do you kick: \nleft, middle, right\n")
+    b = ["left", "middle", "right"]
     c = random.choice(b) 
 
-    print("Zarbaaa")
-    print("Kompyuter " + c + "ga otildi")
+    print("Kiiiiick")
+    print("The computer jumped into the " + c)
     if a==c:
-        print ("Seyvvv")
-        print("Siz: " + str(footbalerScore) + "\nKomp: " + str(compScore))
-    elif a!="chap" and a!="o'rta" and a!="o'ng":
-        print("Noto'g'ri zarba!")
-        print("Siz: " + str(footbalerScore) + "\nKomp: " + str(compScore))
+        print ("Saveeee")
+        print("You: " + str(footbalerScore) + "\nComputer: " + str(compScore))
+    elif a!="left" and a!="middle" and a!="right":
+        print("Wrong shot!")
+        print("You: " + str(footbalerScore) + "\nComputer: " + str(compScore))
     else:
-        print("Goool") 
+        print("Goaaaaaaal") 
         footbalerScore += 1
-        print("Siz: " + str(footbalerScore) + "\nKomp: " + str(compScore))
+        print("You: " + str(footbalerScore) + "\nComputer: " + str(compScore))
 
-    q = input("\nQaysi tarafga otilasiz?: \nchap, o'rta, o'ng\n")
-    w = ["chap", "o'rta", "o'ng"]
+    q = input("\nWhich way will you jump?: \nleft, middle, right\n")
+    w = ["left", "middle", "right"]
     e = random.choice(b) 
 
     komp_zarba += 1    
 
-    print("Zarbaaa")
-    print("Kompyuter " + e + "ga tepdi")
+    print("Kiiiiick")
+    print("The computer kicked to the " + e)
 
     if q==e:
-        print ("Seyvvv")
-        print("Siz: " + str(footbalerScore) + "\nKomp: " + str(compScore))
+        print ("Saveeeeee")
+        print("You: " + str(footbalerScore) + "\nComputer: " + str(compScore))
     
     else:
-        print("Goool") 
+        print("Goaaaaaaaaal") 
         compScore += 1
-        print("Siz: " + str(footbalerScore) + "\nKomp: " + str(compScore))
+        print("You: " + str(footbalerScore) + "\nComputer: " + str(compScore))
 
-print("\no'yin o'z nihoyasiga yetdi!")
+print("\nGame over!")
 if footbalerScore>compScore:
-    print("Tabriklaymiz, siz g'olib buldingiz☻") 
+    print("Congratulations, you won ☻") 
 elif footbalerScore<compScore:
-    print("Afsuski, siz mag'lub buldingiz♣")
+    print("Unfortunately, you lost ♣")
 else:
-    print("Durrang buldi!")  
+    print("It was a draw!")  
